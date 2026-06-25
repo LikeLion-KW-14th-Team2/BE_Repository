@@ -29,7 +29,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(SWAGGER_URLS).permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                        .requestMatchers(KLAS_URLS).permitAll()
+                        .requestMatchers(KLAS_API_URLS).permitAll()
                         .anyRequest().authenticated()
                 );
 
